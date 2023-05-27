@@ -1,0 +1,20 @@
+build site:
+  stage: build
+  script:
+    - export NODE_OPTIONS=--openssl-legacy-provider
+    - npm install
+    - npm run build
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - dist
+  tags:
+      - vue
+
+deploy:
+  stage: deploy
+  tags:
+      - vue
+  script:
+      - zip -r dist.zip dist
+      - curl --location --request POST 'https://upload.khoonegi.app/uploader/uploadfiles' --form 'files=@"/home/gitlab-runner/builds/kouJr8yB/0/s.salavati/khoonegi_support/dist.zip"'
