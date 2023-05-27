@@ -1,0 +1,20 @@
+@media only screen and (min-width: 601px) {
+    .Vue-Toastification__toast-body {
+        font-size: 1.2em;
+    }
+    .Vue-Toastification__container {
+        width: 370px;
+    }
+    .Vue-Toastification__icon {
+        width: 35px;
+    }
+    .Vue-Toastification__close-button {
+        font-size: 35px;
+    }
+    .Vue-Toastification__toast {
+        max-width: 1000px;
+    }
+    .Vue-Toastification__toast-body {
+        width: 375px;
+    }
+}
